@@ -1,0 +1,51 @@
+# Overview {.unnumbered}
+
+This notebook documents two exploratory analyses of Finnish cultural heritage
+metadata retrieved through the [Finna](https://www.finna.fi/) ecosystem, using
+the `finna` R package.
+
+## Use cases
+
+- **Chapter 1 — Fennica (1809–1917).** Characterizes publication growth,
+  language distributions, publication formats, and metadata completeness
+  in the Finnish National Bibliography over the long nineteenth century.
+- **Chapter 2 — Viola (1900–2025).** Explores the Viola collection, the
+  Finnish national discography and bibliography of sheet music, including
+  growth trends, language change, and format-specific dynamics (sheet
+  music, sound recordings, video).
+
+## Data
+
+Both chapters expect the following files to be available locally, at the
+paths used in the original analysis scripts:
+
+```
+~/finna/inst/extras/nineteen_cen.rds
+~/finna/inst/extras/viola_collection.rds
+```
+
+If your data lives elsewhere, update the `readRDS()` path in the first code
+chunk of each chapter (or set an environment variable / project-level
+`params` entry — see the note at the top of each chapter).
+
+## Required packages
+
+```r
+install.packages(c(
+  "dplyr", "ggplot2", "scales", "forcats",
+  "patchwork", "stringr", "tidyr", "grid"
+))
+```
+
+## Rendering this book
+
+```bash
+quarto render
+```
+
+This produces a static site in `docs/`, which can be published directly
+(e.g. via GitHub Pages) with:
+
+```bash
+quarto publish gh-pages
+```

@@ -1,0 +1,37 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Finnish Cultural Heritage Metadata: Analysis Notebook"
+  subtitle: "Fennica and Viola metadata explorations via the finna R package"
+  author: "Akewak Jeba"
+  date: today
+  chapters:
+    - index.qmd
+    - 01-fennica.qmd
+    - 02-viola.qmd
+  page-navigation: true
+  repo-url: https://github.com/fennicahub/finna
+  page-footer:
+    left: "Produced with Quarto"
+    right: "University of Turku"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    code-summary: "Show code"
+    fig-width: 9
+    fig-height: 6
+    fig-align: center
+    smooth-scroll: true
+
+execute:
+  warning: false
+  message: false
+  freeze: auto
